@@ -1,0 +1,288 @@
+/* <!-- # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 700 --> */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@font-face {
+  font-family: space-mono;
+  src: url("font/SpaceMono-Regular.ttf");
+  font-weight: regular;
+}
+@font-face {
+  font-family: space-mono;
+  src: url("font/SpaceMono-Bold.ttf");
+  font-weight: bold;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: hsl(185, 41%, 84%);
+  font-size: 62.7%;
+}
+
+body {
+  padding-top: 200px;
+  font-family: space-mono;
+  font-size: 1.2rem;
+}
+.logo {
+  position: absolute;
+  font-size: 2.4rem;
+  top: -9rem;
+  left: 47%;
+  letter-spacing: 0.5rem;
+}
+.main,
+.main form {
+  padding: 2rem;
+}
+.main {
+  width: 100%;
+  max-width: 70rem;
+  aspect-ratio: 18/8.5;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  gap: 2.4rem;
+  border-radius: 1rem;
+}
+.main form,
+.results {
+  padding: 1rem;
+}
+.main form {
+  flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main form input {
+  height: 3rem;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  border-radius: 0.3rem;
+  text-align: right;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 0.2rem 0.8rem;
+  color: hsl(184, 14%, 56%);
+}
+.bill-label,
+.number-of-people-label,
+.tip-select-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: hsl(184, 14%, 56%);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+/* - Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%) */
+.tip-select-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.bill-label {
+  display: block;
+}
+.bill-input {
+  width: 100%;
+}
+.tip-choices {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.tip-choice {
+  display: inline-block;
+  display: flex;
+  height: 3.2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(185, 41%, 84%);
+  border-radius: 0.3rem;
+  align-items: center;
+  justify-content: center;
+}
+.tip-choice:hover {
+  cursor: pointer;
+}
+/*
+.tip-choices button {
+  display: inline-block;
+  height: 32px;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(185, 41%, 84%);
+  border-radius: 3px;
+}
+*/
+/* .tip-choices button:focus {
+  outline: none;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+} */
+.tip-choices input {
+  font-size: inherit;
+  font-size: 1rem;
+}
+.tip-choices input:focus {
+  outline: none;
+}
+.tip-choice-input::placeholder {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  color: hsl(183, 100%, 15%);
+}
+.number-of-people-input {
+  width: 100%;
+}
+.results {
+  background-color: hsl(183, 100%, 15%);
+  flex: 1 0;
+  border-radius: 1rem;
+  padding: 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tip-results {
+  font-size: 3rem;
+}
+.tip-results div {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.tip-results div span,
+.tip-results div h3 {
+  display: inline-block;
+}
+.tip-results div h3 {
+  color: hsl(172, 67%, 45%);
+}
+.tip-result {
+  display: flex;
+  justify-content: space-between;
+}
+.tip-result div {
+  display: inline-block;
+  background-color: black;
+}
+.tip-amount-heading,
+.tip-total-heading {
+  font-size: 12px;
+  font-weight: bold;
+  color: hsl(185, 41%, 84%);
+  text-transform: capitalize;
+}
+.person {
+  font-size: 1rem;
+  letter-spacing: 0px;
+  color: hsl(184, 14%, 56%);
+  text-transform: none;
+}
+.results button {
+  width: 100%;
+  height: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  border-radius: 0.3rem;
+}
+.results button:active {
+  background-color: hsl(185, 41%, 84%);
+}
+.number-of-people-input {
+  text-align: center;
+  background-image: url(/icons/currency-dollar.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.7rem;
+}
+.bill-input {
+  text-align: center;
+  background-image: url(/icons/user-fill.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.7rem;
+}
+.button-active {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+@media (max-width: 750px) {
+  .main {
+    flex-direction: column;
+  }
+  .main form {
+    gap: 2.4rem;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+}

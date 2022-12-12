@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>TIP CALCULATOR APP</title>
+  </head>
+  <body>
+    <section class="main">
+      <header class="logo">SPLI<br />TTER</header>
+      <form>
+        <header>
+          <label for="#bill" class="bill-label">Bill</label>
+          <input
+            type="number"
+            id="bill-input"
+            class="bill-input"
+            placeholder="0"
+          />
+        </header>
+        <section class="tip-selection">
+          <label for="" class="tip-select-label">Select Tip %</label>
+          <div class="tip-choices">
+            <span class="tip-choice">5%</span>
+            <span class="tip-choice">10%</span
+            ><span class="tip-choice">15%</span>
+            <span class="tip-choice">25%</span
+            ><span class="tip-choice">50%</span>
+            <input
+              id="tip-choice-input"
+              class="tip-choice-input"
+              type="number"
+              placeholder="Custom"
+              maxlength="3"
+              size="1"
+            />
+          </div>
+        </section>
+        <footer>
+          <label for="#number-of-people" class="number-of-people-label"
+            >Number of People</label
+          ><input
+            type="text"
+            maxlength="2"
+            id="number-of-people"
+            class="number-of-people-input"
+            placeholder="0"
+          />
+        </footer>
+      </form>
+      <section class="results">
+        <section class="tip-results">
+          <div class="tip-amount-container">
+            <span class="tip-amount-heading"
+              >Tip amount<br /><span class="person">/ person</span>
+            </span>
+            <h3 id="tip-amount">$0.00</h3>
+          </div>
+          <div class="total-container">
+            <span class="tip-total-heading">
+              Total<br /><span class="person">/ person</span>
+            </span>
+            <h3 id="total-amount">$0.00</h3>
+          </div>
+        </section>
+        <button class="reset">reset</button>
+      </section>
+    </section>
+  </body>
+</html>
