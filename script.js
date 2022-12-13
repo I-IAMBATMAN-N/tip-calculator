@@ -1,3 +1,5 @@
+"use strict";
+
 const billInput = document.querySelector("#bill-input");
 const buttonChoices = document.querySelectorAll(".tip-choice");
 const tipChoices = document.querySelector(".tip-choices");
