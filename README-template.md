@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/I-IAMBATMAN-N/todo-app)
-- Live Site URL: [Add live site URL here](https://todo-app-jla.netlify.app)
+- Solution URL: [Add solution URL here](https://github.com/I-IAMBATMAN-N/tip-calculator)
+- Live Site URL: [Add live site URL here](https://tipo-calculator.netlify.app)
 
 ## My process
 
