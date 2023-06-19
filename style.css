@@ -60,11 +60,14 @@ html {
   background-color: hsl(185, 41%, 84%);
   font-size: 62.7%;
 }
-
 body {
-  padding-top: 200px;
   font-family: space-mono;
   font-size: 1.2rem;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .logo {
   position: absolute;
@@ -82,14 +85,15 @@ body {
   width: 100%;
   max-width: 70rem;
   aspect-ratio: 18/8.5;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   background-color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: space-between;
   position: relative;
   gap: 2.4rem;
   border-radius: 1rem;
+
+  transform: scale(1.2);
 }
 .main form,
 .results {
@@ -274,15 +278,16 @@ body {
   color: hsl(183, 100%, 15%);
   background-color: hsl(172, 67%, 45%);
 }
-@media (max-width: 750px) {
+@media (max-width: 48em) {
   .main {
     flex-direction: column;
+    transform: scale(1);
   }
   .main form {
     gap: 2.4rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 25em) {
   html {
     font-size: 55%;
   }
