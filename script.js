@@ -10,6 +10,9 @@ const resetButton = document.querySelector(".reset");
 const tipAmount = document.querySelector("#tip-amount");
 const totalAmount = document.querySelector("#total-amount");
 
+const regExpString = /[a-záéíóúàèìòùäëïöüěščřžýůú=+-.,]/;
+const regExpString2 = /[A-ZÁÉÍÓÚÀÈÌÒÙÄËÏÖÜĚŠČŘŽÝŮÚ=+-.,]/;
+
 let bill = 0;
 let percentageNumber = 0;
 let numberPeople = 0;
@@ -39,15 +42,36 @@ buttonChoices.forEach((e) => {
 });
 
 billInput.addEventListener("input", function (e) {
-  bill = Number(billInput.value);
+  //
+  if (regExpString.test(e.data) || regExpString2.test(e.data)) {
+    //
+    e.target.value = "";
+    alert("Please fill all fields correctly");
+  } else if (!regExpString.test(e.data)) {
+    bill = Number(billInput.value);
+  }
 });
 
 choiceInput.addEventListener("input", function (e) {
-  percentageNumber = Number(choiceInput.value);
+  //
+  if (regExpString.test(e.data) || regExpString2.test(e.data)) {
+    //
+    e.target.value = "";
+    alert("Please fill all fields correctly");
+  } else if (!regExpString.test(e.data)) {
+    percentageNumber = Number(choiceInput.value);
+  }
 });
 
-numberPeopleInput.addEventListener("input", function () {
-  numberPeople = Number(numberPeopleInput.value);
+numberPeopleInput.addEventListener("input", function (e) {
+  //
+  if (regExpString.test(e.data) || regExpString2.test(e.data)) {
+    //
+    e.target.value = "";
+    alert("Please fill all fields correctly");
+  } else if (!regExpString.test(e.data)) {
+    numberPeople = Number(numberPeopleInput.value);
+  }
 });
 
 function calcTip() {

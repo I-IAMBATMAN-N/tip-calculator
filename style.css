@@ -138,6 +138,14 @@ body {
 .bill-label {
   display: block;
 }
+.bill-input:focus,
+.number-of-people-input:focus {
+  outline: #ffffff00;
+}
+.bill-input:invalid,
+.number-of-people-input:invalid {
+  border: solid 0.2rem red;
+}
 .bill-input {
   width: 100%;
 }
